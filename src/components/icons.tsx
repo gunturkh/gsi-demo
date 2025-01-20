@@ -1,6 +1,7 @@
 import {
   AlertTriangle,
   ArrowRight,
+  Camera,
   Check,
   ChevronLeft,
   ChevronRight,
@@ -36,6 +37,7 @@ import {
 export type Icon = LucideIcon;
 
 export const Icons = {
+  camera: Camera,
   dashboard: LayoutDashboardIcon,
   logo: Command,
   login: LogIn,
