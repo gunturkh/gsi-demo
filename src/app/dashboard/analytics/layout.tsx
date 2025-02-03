@@ -22,14 +22,14 @@ export default function OverViewLayout({
           <Card>
             <CardHeader className='flex flex-row items-center justify-between space-y-0 pb-2'>
               <CardTitle className='text-sm font-medium'>
-                Site Terpasang
+                Perangkat Terpasang
               </CardTitle>
               <Building className='h-4 w-4 text-muted-foreground' />
             </CardHeader>
             <CardContent>
               <div className='text-2xl font-bold'>248</div>
               <p className='text-xs text-muted-foreground'>
-                Total lokasi pemasangan
+                Total perangkat IoT aktif
               </p>
             </CardContent>
           </Card>
@@ -43,12 +43,12 @@ export default function OverViewLayout({
             <CardContent>
               <div className='flex justify-between'>
                 <div>
-                  <div className='text-2xl font-bold'>1,892</div>
-                  <p className='text-xs text-muted-foreground'>Aktif</p>
+                  <div className='text-2xl font-bold'>1.235</div>
+                  <p className='text-xs text-muted-foreground'>Pembacaan/mnt</p>
                 </div>
                 <div>
-                  <div className='text-2xl font-bold'>23</div>
-                  <p className='text-xs text-muted-foreground'>Tidak Aktif</p>
+                  <div className='text-2xl font-bold'>98%</div>
+                  <p className='text-xs text-muted-foreground'>Akurasi</p>
                 </div>
               </div>
             </CardContent>
@@ -56,23 +56,23 @@ export default function OverViewLayout({
           <Card>
             <CardHeader className='flex flex-row items-center justify-between space-y-0 pb-2'>
               <CardTitle className='text-sm font-medium'>
-                Laporan Hari Ini
+                Pembacaan Sensor
               </CardTitle>
               <AlertTriangle className='h-4 w-4 text-muted-foreground' />
             </CardHeader>
             <CardContent>
               <div className='space-y-1'>
                 <div className='flex justify-between'>
-                  <span>Sensor</span>
-                  <span className='font-medium'>15</span>
+                  <span>Suhu</span>
+                  <span className='font-medium'>32°C</span>
                 </div>
                 <div className='flex justify-between'>
-                  <span>Kamera</span>
-                  <span className='font-medium'>8</span>
+                  <span>Kelembaban</span>
+                  <span className='font-medium'>65%</span>
                 </div>
                 <div className='flex justify-between'>
-                  <span>Sistem</span>
-                  <span className='font-medium'>3</span>
+                  <span>Tekanan</span>
+                  <span className='font-medium'>1013 hPa</span>
                 </div>
               </div>
             </CardContent>
@@ -95,13 +95,13 @@ export default function OverViewLayout({
             </CardContent>
           </Card>
         </div>
-        <MapView />
-        {/* <div className='grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-7'>
+        {/* <MapView /> */}
+        <div className='grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-7'>
           <div className='col-span-4'>{bar_stats}</div>
           <div className='col-span-4 md:col-span-3'>{sales}</div>
           <div className='col-span-4'>{area_stats}</div>
           <div className='col-span-4 md:col-span-3'>{pie_stats}</div>
-        </div> */}
+        </div>
       </div>
     </PageContainer>
   );

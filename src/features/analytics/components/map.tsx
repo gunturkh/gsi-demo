@@ -1,7 +1,8 @@
 'use client';
 // Using Mapbox
 import * as React from 'react';
-import Map, { Marker, Popup } from 'react-map-gl';
+import Map, { Marker } from 'react-map-gl';
+import { BrickWallIcon } from 'lucide-react';
 import Pin from './pin';
 import { useRouter } from 'next/navigation';
 
@@ -11,7 +12,6 @@ const MapView = () => {
   const router = useRouter();
 
   const [cities, setCities] = React.useState<any>([]);
-  const [selectedCity, setSelectedCity] = React.useState<any>(null);
 
   React.useEffect(() => {
     const fetchCities = async () => {
@@ -34,12 +34,7 @@ const MapView = () => {
           router.push(`/dashboard/sites/${encodeURIComponent(city.name)}`)
         }
       >
-        <div
-          onMouseEnter={() => setSelectedCity(city)}
-          onMouseLeave={() => setSelectedCity(null)}
-        >
-          <Pin size={30} />
-        </div>
+        <Pin size={20} />
       </Marker>
     ));
   }, [router, cities]);
@@ -73,28 +68,7 @@ const MapView = () => {
         mapStyle='mapbox://styles/mapbox/streets-v9'
       >
         {pins}
-
-        {selectedCity && (
-          <Popup
-            latitude={selectedCity.latitude}
-            longitude={selectedCity.longitude}
-            anchor='bottom'
-            closeButton={false}
-            closeOnClick={false}
-            onClose={() => setSelectedCity(null)}
-            offset={25}
-            style={{ padding: '0.5rem', pointerEvents: 'none' }}
-          >
-            <div className='text-sm font-medium text-black'>
-              {selectedCity.name}
-              {selectedCity?.data?.bridges && (
-                <div className='text-muted-foreground'>
-                  {selectedCity.data.bridges.length} perangkat
-                </div>
-              )}
-            </div>
-          </Popup>
-        )}
+        {/* {bridgePins} */}
       </Map>
     </>
   );
