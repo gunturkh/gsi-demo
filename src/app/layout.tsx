@@ -9,8 +9,8 @@ import './globals.css';
 import 'mapbox-gl/dist/mapbox-gl.css';
 
 export const metadata: Metadata = {
-  title: 'Next Shadcn',
-  description: 'Basic dashboard with Next.js and Shadcn'
+  title: 'Dashboard',
+  description: 'Dashboard'
 };
 
 const lato = Lato({

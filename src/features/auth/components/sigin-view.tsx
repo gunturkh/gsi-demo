@@ -1,7 +1,7 @@
 import { buttonVariants } from '@/components/ui/button';
 import { cn } from '@/lib/utils';
 import { GitHubLogoIcon } from '@radix-ui/react-icons';
-import { StarIcon } from 'lucide-react';
+import { HexagonIcon, StarIcon } from 'lucide-react';
 import { Metadata } from 'next';
 import Link from 'next/link';
 import UserAuthForm from './user-auth-form';
@@ -24,9 +24,18 @@ export default function SignInViewPage({ stars }: { stars: number }) {
         Login
       </Link>
       <div className='relative hidden h-full flex-col bg-muted p-10 text-white dark:border-r lg:flex'>
-        <div className='absolute inset-0 bg-zinc-900' />
+        <div
+          className='absolute inset-0'
+          style={{
+            backgroundImage:
+              'url(https://images.unsplash.com/photo-1579546929662-711aa81148cf)',
+            backgroundSize: 'cover',
+            backgroundPosition: 'center'
+          }}
+        />
+        <div className='absolute inset-0 bg-black/50' />
         <div className='relative z-20 flex items-center text-lg font-medium'>
-          <svg
+          {/* <svg
             xmlns='http://www.w3.org/2000/svg'
             viewBox='0 0 24 24'
             fill='none'
@@ -37,10 +46,11 @@ export default function SignInViewPage({ stars }: { stars: number }) {
             className='mr-2 h-6 w-6'
           >
             <path d='M15 6v12a3 3 0 1 0 3-3H6a3 3 0 1 0 3 3V6a3 3 0 1 0-3 3h12a3 3 0 1 0-3-3' />
-          </svg>
+          </svg> */}
+          <HexagonIcon className='mr-2' />
           Logo
         </div>
-        <div className='relative z-20 mt-auto'>
+        {/* <div className='relative z-20 mt-auto'>
           <blockquote className='space-y-2'>
             <p className='text-lg'>
               &ldquo;This starter template has saved me countless hours of work
@@ -49,12 +59,11 @@ export default function SignInViewPage({ stars }: { stars: number }) {
             </p>
             <footer className='text-sm'>Random Dude</footer>
           </blockquote>
-        </div>
+        </div> */}
       </div>
       <div className='flex h-full items-center p-4 lg:p-8'>
         <div className='mx-auto flex w-full flex-col justify-center space-y-6 sm:w-[350px]'>
-          {/* github link  */}
-          <Link
+          {/* <Link
             className={cn(
               buttonVariants({
                 variant: 'ghost'
@@ -75,7 +84,7 @@ export default function SignInViewPage({ stars }: { stars: number }) {
               />
               <span className='font-display font-medium'>{stars}</span>
             </div>
-          </Link>
+          </Link> */}
           <div className='flex flex-col space-y-2 text-center'>
             <h1 className='text-2xl font-semibold tracking-tight'>
               Create an account
