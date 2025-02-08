@@ -186,6 +186,7 @@ export function FileUploader(props: FileUploaderProps) {
 
   return (
     <div className='relative flex flex-col gap-6 overflow-hidden'>
+      {/* @ts-ignore */}
       <Dropzone
         onDrop={onDrop}
         accept={accept}

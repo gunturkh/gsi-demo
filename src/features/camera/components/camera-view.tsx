@@ -8,7 +8,7 @@ const CameraView = () => {
 
   const handleDevices = React.useCallback(
     (mediaDevices: MediaDeviceInfo[]) => {
-      console.log('mediaDevices', mediaDevices);
+      // console.log('mediaDevices', mediaDevices);
       setDevices(
         mediaDevices.filter(
           ({ kind, label }) => kind === 'videoinput' && !label.includes('OBS')
@@ -26,7 +26,7 @@ const CameraView = () => {
   return (
     <div className='grid grid-cols-4 gap-2'>
       {devices.map((device, key) => (
-        <div>
+        <div key={`camera-${key}`}>
           <div className='flex flex-col'>
             {/* @ts-ignore */}
             <Webcam

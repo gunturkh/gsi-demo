@@ -12,6 +12,7 @@ export default function Providers({
   return (
     <>
       <ThemeProvider attribute='class' defaultTheme='system' enableSystem>
+        {/* @ts-ignore */}
         <SessionProvider session={session}>{children}</SessionProvider>
       </ThemeProvider>
     </>

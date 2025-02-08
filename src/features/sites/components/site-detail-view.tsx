@@ -1,6 +1,8 @@
-import PageContainer from '@/components/layout/page-container';
+'use client';
 import SiteMap from './site-map';
 import { Card, CardHeader, CardTitle } from '@/components/ui/card';
+import CameraView from '@/features/camera/components/camera-view';
+import { useParams } from 'next/navigation';
 
 const SITE_DATA = {
   'Suramadu Bridge': { lat: -7.198, lng: 112.699 },
@@ -8,7 +10,9 @@ const SITE_DATA = {
   Batam: { lat: 0.9817595390017051, lng: 104.04156854077729 }
 };
 
-export default function SiteDetailView({ site }: { site: string }) {
+export default function SiteDetailView() {
+  const params = useParams();
+  const { site } = params;
   const coordinates = SITE_DATA[site as keyof typeof SITE_DATA];
 
   return (
@@ -50,6 +54,10 @@ export default function SiteDetailView({ site }: { site: string }) {
             </div>
           </CardHeader>
         </Card>
+      </div>
+
+      <div>
+        <CameraView />
       </div>
     </div>
   );

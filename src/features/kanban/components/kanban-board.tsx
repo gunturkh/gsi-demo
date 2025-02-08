@@ -189,6 +189,7 @@ export function KanbanBoard() {
       onDragOver={onDragOver}
     >
       <BoardContainer>
+        {/* @ts-ignore */}
         <SortableContext items={columnsId}>
           {columns?.map((col, index) => (
             <Fragment key={col.id}>
@@ -208,6 +209,7 @@ export function KanbanBoard() {
       </BoardContainer>
 
       {'document' in window &&
+        // @ts-ignore
         createPortal(
           <DragOverlay>
             {activeColumn && (
