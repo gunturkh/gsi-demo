@@ -37,7 +37,6 @@ import {
   ChevronRight,
   ChevronsUpDown,
   CreditCard,
-  GalleryVerticalEnd,
   LogOut
 } from 'lucide-react';
 import { signOut, useSession } from 'next-auth/react';
@@ -45,10 +44,11 @@ import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import * as React from 'react';
 import { Icons } from '../icons';
+import Image from 'next/image';
 
 export const company = {
-  name: 'Acme Inc',
-  logo: GalleryVerticalEnd,
+  name: 'Batukarang Kenan Abadi',
+  logo: <Image src='/bkka.png' width={20} height={20} alt='bkka-logo' />,
   plan: 'Enterprise'
 };
 
@@ -61,8 +61,8 @@ export default function AppSidebar() {
     <Sidebar collapsible='icon'>
       <SidebarHeader>
         <div className='flex gap-2 py-2 text-sidebar-accent-foreground'>
-          <div className='flex aspect-square size-8 items-center justify-center rounded-lg bg-sidebar-primary text-sidebar-primary-foreground'>
-            <company.logo className='size-4' />
+          <div className='flex aspect-square size-8 items-center justify-center rounded-lg bg-white text-sidebar-primary-foreground'>
+            {company.logo}
           </div>
           <div className='grid flex-1 text-left text-sm leading-tight'>
             <span className='truncate font-semibold'>{company.name}</span>
