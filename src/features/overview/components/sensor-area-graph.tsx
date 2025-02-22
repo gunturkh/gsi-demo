@@ -22,7 +22,7 @@ import { useRouter } from 'next/navigation';
 
 async function getSensorData(sensorId: string) {
   const res = await fetch(
-    `http://localhost:3000/api/sensor-data?id_sensor=${sensorId}`
+    `${process.env.NEXT_PUBLIC_API_URL}/api/sensor-data?id_sensor=${sensorId}`
   );
   if (!res.ok) throw new Error('Failed to fetch sensor data');
   return res.json();

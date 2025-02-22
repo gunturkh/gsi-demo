@@ -21,7 +21,7 @@ import { Skeleton } from '@/components/ui/skeleton';
 
 async function getSensorData(sensorId: string) {
   const res = await fetch(
-    `http://localhost:3000/api/sensor-data?id_sensor=${sensorId}`
+    `${process.env.NEXT_PUBLIC_API_URL}/api/sensor-data?id_sensor=${sensorId}`
   );
   if (!res.ok) throw new Error('Failed to fetch sensor data');
   const data = await res.json();
@@ -36,16 +36,19 @@ async function getSensorSummary(
   data: Array<{ value: number }>,
   prompt: string
 ) {
-  const res = await fetch('/api/analyze-sensor', {
-    method: 'POST',
-    headers: {
-      'Content-Type': 'application/json'
-    },
-    body: JSON.stringify({
-      data: data.map((d) => d.value),
-      system_prompt: prompt
-    })
-  });
+  const res = await fetch(
+    `${process.env.NEXT_PUBLIC_API_URL}/api/analyze-sensor`,
+    {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify({
+        data: data.map((d) => d.value),
+        system_prompt: prompt
+      })
+    }
+  );
   if (!res.ok) throw new Error('Gagal memproses analisis');
   return await res.text();
 }
