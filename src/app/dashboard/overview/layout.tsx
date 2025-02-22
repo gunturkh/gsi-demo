@@ -102,12 +102,14 @@ export default function OverViewLayout({
               </p>
             </CardContent>
           </Card>
+        </div>
+        <MapView />
+        <div className='grid gap-4 md:grid-cols-2 lg:grid-cols-4'>
           <div className='col-span-1'>{accl_aa222_02_e_stats}</div>
           <div className='col-span-1'>{disp_aa222_02_n_stats}</div>
           <div className='col-span-1'>{disp_aa222_02_e_stats}</div>
           <div className='col-span-1'>{accl_aa222_02_n_stats}</div>
         </div>
-        <MapView />
         {/* <div className='grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-7'>
           <div className='col-span-4'>{bar_stats}</div>
           <div className='col-span-4 md:col-span-3'>{sales}</div>

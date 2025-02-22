@@ -97,7 +97,7 @@ export default function OverViewLayout({
           </Card>
         </div>
         {/* <MapView /> */}
-        <div className='grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-6'>
+        <div className='grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3'>
           <div className='col-span-1'>
             <SensorAreaGraph sensorId='64' color='hsl(var(--chart-1))' />
           </div>
