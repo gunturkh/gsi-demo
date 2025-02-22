@@ -8,12 +8,20 @@ export default function OverViewLayout({
   sales,
   pie_stats,
   bar_stats,
-  area_stats
+  area_stats,
+  accl_aa222_02_e_stats,
+  disp_aa222_02_n_stats,
+  disp_aa222_02_e_stats,
+  accl_aa222_02_n_stats
 }: {
   sales: React.ReactNode;
   pie_stats: React.ReactNode;
   bar_stats: React.ReactNode;
   area_stats: React.ReactNode;
+  accl_aa222_02_e_stats: React.ReactNode;
+  disp_aa222_02_n_stats: React.ReactNode;
+  disp_aa222_02_e_stats: React.ReactNode;
+  accl_aa222_02_n_stats: React.ReactNode;
 }) {
   return (
     <PageContainer>
@@ -94,6 +102,10 @@ export default function OverViewLayout({
               </p>
             </CardContent>
           </Card>
+          <div className='col-span-1'>{accl_aa222_02_e_stats}</div>
+          <div className='col-span-1'>{disp_aa222_02_n_stats}</div>
+          <div className='col-span-1'>{disp_aa222_02_e_stats}</div>
+          <div className='col-span-1'>{accl_aa222_02_n_stats}</div>
         </div>
         <MapView />
         {/* <div className='grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-7'>

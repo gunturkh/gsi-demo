@@ -3,6 +3,7 @@ import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import MapView from '@/features/overview/components/map';
 import React from 'react';
 import { Building, Camera, AlertTriangle, Wifi } from 'lucide-react';
+import { SensorAreaGraph } from '@/features/overview/components/sensor-area-graph';
 
 export default function OverViewLayout({
   sales,
@@ -96,11 +97,87 @@ export default function OverViewLayout({
           </Card>
         </div>
         {/* <MapView /> */}
-        <div className='grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-7'>
-          <div className='col-span-4'>{bar_stats}</div>
+        <div className='grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-6'>
+          <div className='col-span-1'>
+            <SensorAreaGraph sensorId='64' color='hsl(var(--chart-1))' />
+          </div>
+          <div className='col-span-1'>
+            <SensorAreaGraph sensorId='65' color='hsl(var(--chart-2))' />
+          </div>
+          <div className='col-span-1'>
+            <SensorAreaGraph sensorId='66' color='hsl(var(--chart-3))' />
+          </div>
+          <div className='col-span-1'>
+            <SensorAreaGraph sensorId='67' color='hsl(var(--chart-4))' />
+          </div>
+          <div className='col-span-1'>
+            <SensorAreaGraph sensorId='68' color='hsl(var(--chart-5))' />
+          </div>
+          <div className='col-span-1'>
+            <SensorAreaGraph sensorId='69' color='hsl(var(--chart-1))' />
+          </div>
+          <div className='col-span-1'>
+            <SensorAreaGraph
+              sensorId='70'
+              color='hsl(var(--chart-2))'
+              satuan='Cm'
+            />
+          </div>
+          <div className='col-span-1'>
+            <SensorAreaGraph
+              sensorId='71'
+              color='hsl(var(--chart-3))'
+              satuan='Cm'
+            />
+          </div>
+          <div className='col-span-1'>
+            <SensorAreaGraph
+              sensorId='72'
+              color='hsl(var(--chart-4))'
+              satuan='Cm'
+            />
+          </div>
+          <div className='col-span-1'>
+            <SensorAreaGraph sensorId='73' color='hsl(var(--chart-5))' />
+          </div>
+          <div className='col-span-1'>
+            <SensorAreaGraph sensorId='74' color='hsl(var(--chart-1))' />
+          </div>
+          <div className='col-span-1'>
+            <SensorAreaGraph sensorId='75' color='hsl(var(--chart-2))' />
+          </div>
+          <div className='col-span-1'>
+            <SensorAreaGraph
+              sensorId='76'
+              color='hsl(var(--chart-3))'
+              satuan='Microstrain'
+            />
+          </div>
+          <div className='col-span-1'>
+            <SensorAreaGraph
+              sensorId='77'
+              color='hsl(var(--chart-4))'
+              satuan='Microstrain'
+            />
+          </div>
+          <div className='col-span-1'>
+            <SensorAreaGraph
+              sensorId='78'
+              color='hsl(var(--chart-5))'
+              satuan='Degree'
+            />
+          </div>
+          <div className='col-span-1'>
+            <SensorAreaGraph
+              sensorId='79'
+              color='hsl(var(--chart-1))'
+              satuan='Degree'
+            />
+          </div>
+          {/* <div className='col-span-4'>{bar_stats}</div>
           <div className='col-span-4 md:col-span-3'>{sales}</div>
           <div className='col-span-4'>{area_stats}</div>
-          <div className='col-span-4 md:col-span-3'>{pie_stats}</div>
+          <div className='col-span-4 md:col-span-3'>{pie_stats}</div> */}
         </div>
       </div>
     </PageContainer>
