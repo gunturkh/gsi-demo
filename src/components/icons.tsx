@@ -3,6 +3,7 @@ import {
   ArrowRight,
   Camera,
   ChartArea,
+  ChartAreaIcon,
   Check,
   ChevronLeft,
   ChevronRight,
@@ -40,6 +41,7 @@ export type Icon = LucideIcon;
 export const Icons = {
   analytics: ChartArea,
   camera: Camera,
+  dataset: ChartAreaIcon,
   dashboard: LayoutDashboardIcon,
   logo: Command,
   login: LogIn,

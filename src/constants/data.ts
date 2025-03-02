@@ -46,6 +46,22 @@ export const navItems: NavItem[] = [
     items: [] // No child items
   },
   {
+    title: 'Annotation',
+    url: '/dashboard/annotation',
+    icon: 'dataset',
+    shortcut: ['n', 'n'],
+    isActive: false,
+    items: [] // No child items
+  },
+  {
+    title: 'Dataset',
+    url: '/dashboard/dataset',
+    icon: 'dataset',
+    shortcut: ['d', 'd'],
+    isActive: false,
+    items: [] // No child items
+  },
+  {
     title: 'Account',
     url: '#', // Placeholder as there is no direct link for the parent
     icon: 'billing',
