@@ -125,3 +125,15 @@
     @apply bg-background text-foreground;
   }
 }
+
+/* Add these styles to remove the white background from Mapbox popups */
+.mapboxgl-popup-content {
+  background: none !important;
+  border: none !important;
+  padding: 0 !important;
+  box-shadow: none !important;
+}
+
+.mapboxgl-popup-tip {
+  display: none !important;
+}
