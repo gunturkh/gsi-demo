@@ -406,7 +406,7 @@ export default function MapOverview() {
                           className='mt-3 w-full'
                           onClick={() =>
                             router.push(
-                              `/sites/${hoveredPointInfo.name.replace(/\s+/g, '-')}`
+                              `/dashboard/sites/${hoveredPointInfo.name.replace(/\s+/g, '-')}`
                             )
                           }
                         >
