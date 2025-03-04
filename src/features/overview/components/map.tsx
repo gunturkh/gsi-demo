@@ -47,8 +47,8 @@ const LOCATION_DATA = [
     coordinates: [104.041, 0.981],
     sensors: {
       total: 20,
-      operational: 19,
-      warning: 1,
+      operational: 20,
+      warning: 0,
       critical: 0
     }
   }
