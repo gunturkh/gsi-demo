@@ -65,6 +65,7 @@ export default function MapFilters({
             onClick={() => onFilterChange('all')}
             count={totalLocations}
             label='All Locations'
+            className='text-black'
           />
 
           <FilterButton
